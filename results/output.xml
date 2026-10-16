@@ -1,85 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.14.8 on linux)" generated="2026-10-16T11:56:36.485570" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.14.8 on linux)" generated="2026-10-16T11:59:04.055830" rpa="false" schemaversion="5">
 <suite id="s1" name="Login Test" source="/home/amane/Github/stsweng-robot-ci/tests/login_test.robot">
 <test id="s1-t1" name="Successful Login" line="7">
 <kw name="Open Login Page" owner="resource">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:36.949945" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000'.</msg>
+<msg time="2026-10-16T11:59:04.507709" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-10-16T11:56:36.949397" elapsed="2.679422"/>
+<status status="PASS" start="2026-10-16T11:59:04.507291" elapsed="2.436304"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1280</arg>
 <arg>900</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-10-16T11:56:39.629502" elapsed="0.032097"/>
+<status status="PASS" start="2026-10-16T11:59:06.944677" elapsed="0.038760"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:39.712062" level="INFO">Current page contains text 'STSWENG Login Demo'.</msg>
+<msg time="2026-10-16T11:59:07.026565" level="INFO">Current page contains text 'STSWENG Login Demo'.</msg>
 <arg>STSWENG Login Demo</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-10-16T11:56:39.662795" elapsed="0.049566"/>
+<status status="PASS" start="2026-10-16T11:59:06.983902" elapsed="0.042837"/>
 </kw>
-<status status="PASS" start="2026-10-16T11:56:36.946843" elapsed="2.765825"/>
+<status status="PASS" start="2026-10-16T11:59:04.505912" elapsed="2.521009"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="resource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:39.715193" level="INFO">Typing text 'standard_user' into text field 'id:username'.</msg>
+<msg time="2026-10-16T11:59:07.028907" level="INFO">Typing text 'standard_user' into text field 'id:username'.</msg>
 <arg>id:username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T11:56:39.714361" elapsed="0.436766"/>
+<status status="PASS" start="2026-10-16T11:59:07.028192" elapsed="0.212603"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:40.153097" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2026-10-16T11:56:40.225444" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-10-16T11:59:07.241913" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-10-16T11:59:07.301302" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T11:56:40.152021" elapsed="0.207284"/>
+<status status="PASS" start="2026-10-16T11:59:07.241325" elapsed="0.223386"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:40.361351" level="INFO">Clicking button 'id:login-button'.</msg>
+<msg time="2026-10-16T11:59:07.467183" level="INFO">Clicking button 'id:login-button'.</msg>
+<msg time="2026-10-16T11:59:07.929654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-16T11:59:07.930225" level="FAIL">Button with locator 'id:login-button' not found.</msg>
 <arg>id:login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-10-16T11:56:40.360285" elapsed="0.145307"/>
+<status status="FAIL" start="2026-10-16T11:59:07.465690" elapsed="0.472065">Button with locator 'id:login-button' not found.</status>
 </kw>
-<status status="PASS" start="2026-10-16T11:56:39.713445" elapsed="0.792354"/>
+<status status="FAIL" start="2026-10-16T11:59:07.027528" elapsed="0.910877">Button with locator 'id:login-button' not found.</status>
 </kw>
 <kw name="Products Page Should Be Open" owner="resource">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>id:products-page</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2026-10-16T11:56:40.507206" elapsed="0.022174"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-10-16T11:56:40.559151" level="INFO">Current page contains text 'Products'.</msg>
-<arg>Products</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-10-16T11:56:40.529902" elapsed="0.029481"/>
-</kw>
-<status status="PASS" start="2026-10-16T11:56:40.506369" elapsed="0.053316"/>
+<status status="NOT RUN" start="2026-10-16T11:59:07.939316" elapsed="0.000166"/>
 </kw>
 <doc>A valid user should reach the Products page.</doc>
-<status status="PASS" start="2026-10-16T11:56:36.944756" elapsed="3.615466"/>
+<status status="FAIL" start="2026-10-16T11:59:04.504753" elapsed="3.435537">Button with locator 'id:login-button' not found.</status>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-10-16T11:56:40.562868" elapsed="0.091548"/>
+<status status="PASS" start="2026-10-16T11:59:07.942493" elapsed="0.100194"/>
 </kw>
 <doc>Smoke test for the successful login flow.</doc>
-<status status="PASS" start="2026-10-16T11:56:36.487006" elapsed="4.167616"/>
+<status status="FAIL" start="2026-10-16T11:59:04.058184" elapsed="3.985244"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
 </suite>
 </statistics>
 <errors>
