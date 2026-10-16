@@ -1,0 +1,8 @@
+[project]
+name = "robot-class"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "robotframework>=7.5",
+    "robotframework-seleniumlibrary>=6.9.0",
+]
